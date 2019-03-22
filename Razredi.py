@@ -23,6 +23,6 @@ class Fakulteta():
         self.programi=programi
 
 krneki
-
+sonce je
 
 
