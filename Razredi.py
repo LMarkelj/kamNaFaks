@@ -22,6 +22,7 @@ class Fakulteta():
         self.ime=ime
         self.programi=programi
 
+kr
 
 
 
