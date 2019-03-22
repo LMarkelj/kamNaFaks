@@ -22,8 +22,8 @@ class Fakulteta():
         self.ime=ime
         self.programi=programi
 
-krneki
-sonce jenlj
+#krneki
+#sonce jenlj
 
 
 
