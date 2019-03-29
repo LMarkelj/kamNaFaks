@@ -1,10 +1,9 @@
 class Predmet():
     '''Hrani podatke o predmetu'''
-    def __init__(self,ime,vaje,predavanja,kreditneT):
+    def __init__(self,ime,ure,kreditneT):
         '''pocisti kodo in zavaruj'''
         self.ime=ime
-        self.vaje=vaje
-        self.predavanja=predavanja
+        self.ure=ure
         self.kreditneT=kreditneT
     
 class Program():
