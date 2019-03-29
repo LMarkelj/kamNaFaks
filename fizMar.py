@@ -2,18 +2,7 @@ import requests
 import Razredi
 import re
 
-def odstrani_html(tekst):
-    '''V danem tekstu odstrani kodo zajeto v <>'''
-    novobesedilo = ""
-    oznaka = 0
-    for znak in tekst:
-        if znak == "<":
-            oznaka = 1
-        elif znak == ">":
-            oznaka = 0
-        elif oznaka == 0:
-            novobesedilo += znak
-    return novobesedilo
+
 
 
 
