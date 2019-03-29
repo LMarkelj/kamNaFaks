@@ -3,9 +3,6 @@ from Razredi import *
 import re
 
 
-
-
-
 def ustvariProgramMar(naslovStrani,ime_programa,stopnja):
     '''Ustvari in vrne Študijski program,z njegovimi predmeti'''
     novSez=[]
@@ -26,6 +23,10 @@ def ustvariProgramMar(naslovStrani,ime_programa,stopnja):
                 novSez.append(Predmet(stran[i][j][0],stran[i][j][1],stran[i][j][2]))
     return Program(ime_programa,stopnja,novSez)
 
+def ustvari_faks(ime,programi):
+    '''Funkcija zapise podatke o faksu v primeren class in ga vrne'''
+    return Fakulteta(ime,programi)
 
 
-ustvariProgramMar("https://www.fnm.um.si/index.php/2019/02/04/fizika-predmetnik-s-kreditnim-ovrednotenjem-studijskih-obveznosti-2019-2020/","fizika",1)
+
+ustvari_faks("Maribor fizika",[ustvariProgramMar("https://www.fnm.um.si/index.php/2019/02/04/fizika-predmetnik-s-kreditnim-ovrednotenjem-studijskih-obveznosti-2019-2020/","fizika",1)])
