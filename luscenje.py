@@ -14,7 +14,7 @@ for i in range(len(tabela)):
     for j in range(len(tabela[i])):
         tabela[i][j] = re.split(r'<td>', tabela[i][j])[1:]
         for k in range(len(tabela[i][j])):
-            tabela[i][j][k] = odstrani_html(tabela[i][j][k]).strip('\n')
+            tabela[i][j][k] = odstrani_html(tabela[i][j][k]).rstrip()
 
 
 
