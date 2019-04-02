@@ -6,7 +6,7 @@ def dobi_podatke():
     '''funkcija vrne seznam vseh faksov'''
     sezF = []
     sezF.append(fizMar.inciliziraj_mar())
-    #sezF.append(luscenje.preberi_stran())
+    sezF.append(luscenje.ime_fakultete())
 
     return sezF
 
