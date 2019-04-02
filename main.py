@@ -9,11 +9,14 @@ def dobi_podatke():
 
     return sezF
 
-
 def izpisVsega(sezF):
     '''izpise vse fakse in programe'''
     for element in sezF:
         print(element)
+
+def iskanjePoPredmetu(sezF,imePredmta):
+    '''Funkcija izpise vse fakse z danim predmetom'''
+    
 
 
 
