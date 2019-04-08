@@ -15,7 +15,7 @@ def izpisVsega(sezF):
     for faks in sezF:
         print(faks)
 
-def iskanjePoPredmetu(sezF,imePredmeta):
+def iskanjePoPredmetuF(sezF,imePredmeta):
     '''Funkcija izpise vse fakse z danim predmetom'''
     for faks in sezF:
         zeNapisan = 0
@@ -28,21 +28,34 @@ def iskanjePoPredmetu(sezF,imePredmeta):
             if zeNapisan == 1:
                 break
 
+def iskanjePoPredmetuP(sezF,imePredmeta):
+    '''Funkcija izpise vse programe z danim predmetom'''
+    for faks in sezF:
+        for program in faks.programi:
+            for predmet in program.predmeti:
+                if predmet.ime == imePredmeta:
+                    print (program.ime)
+                    break
 
 
 
 
 
-def main():
-    sezF = dobi_podatke()
-    izbira = int(input('1. Izpiši vse fakse ter njihove programe\n2. Najdi vse fakse ki imajo dani predmet\n3. Zapri program\n\nIzberite: '))
+def main(sezF):
+    izbira = int(input('1. Izpiši vse fakse ter njihove programe\n2. Najdi vse fakse ki imajo dani predmet\n3. Najdi vse študijske programe z danim imenom\n4. Zapri program\n\nIzberite: '))
     if izbira == 1:
         izpisVsega(sezF)
     elif izbira == 2:
         imePredmeta = input("Vpišite ime predmeta: ")
-        iskanjePoPredmetu(sezF,imePredmeta)
+        iskanjePoPredmetuF(sezF,imePredmeta)
     elif izbira == 3:
-        pass
+        imePredmeta = input("Vpišite ime predmeta: ")
+        iskanjePoPredmetuP(sezF,imePredmeta)
+    elif izbira == 4:
+        return True
+    return False
 
-
-main()
+sezF = dobi_podatke()
+koncam = False
+while not koncam:
+    koncam = main(sezF)

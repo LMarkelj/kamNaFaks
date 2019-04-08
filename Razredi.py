@@ -1,7 +1,6 @@
 class Predmet():
     '''Hrani podatke o predmetu'''
     def __init__(self,ime,ure,kreditneT):
-        '''pocisti kodo in zavaruj'''
         self.ime = ime
         self.ure = ure
         self.kreditneT = kreditneT
@@ -12,7 +11,6 @@ class Predmet():
 class Program():
     '''hrani podatke o programu'''
     def __init__(self,ime,stopnja,predmeti):
-        '''Zavaruj'''
         self.predmeti = predmeti
         self.ime = ime
         self.stopnja = stopnja
