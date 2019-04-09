@@ -34,7 +34,7 @@ def iskanjePoPredmetuP(sezF,imePredmeta):
         for program in faks.programi:
             for predmet in program.predmeti:
                 if predmet.ime == imePredmeta:
-                    print (program.ime)
+                    print (program.ime + ", " +faks.ime)
                     break
 
 
@@ -42,7 +42,7 @@ def iskanjePoPredmetuP(sezF,imePredmeta):
 
 
 def main(sezF):
-    izbira = int(input('1. Izpiši vse fakse ter njihove programe\n2. Najdi vse fakse ki imajo dani predmet\n3. Najdi vse študijske programe z danim imenom\n4. Zapri program\n\nIzberite: '))
+    izbira = int(input('1. Izpiši vse fakse ter njihove programe\n2. Najdi vse fakse ki imajo dani predmet\n3. Najdi vse študijske programe z danim predmetom\n4. Zapri program\n\nIzberite: '))
     if izbira == 1:
         izpisVsega(sezF)
     elif izbira == 2:
@@ -53,6 +53,7 @@ def main(sezF):
         iskanjePoPredmetuP(sezF,imePredmeta)
     elif izbira == 4:
         return True
+    print("\n")
     return False
 
 sezF = dobi_podatke()
